@@ -8,15 +8,15 @@
 var bikes = [
     {
         name: 'Canyon',
-        weight: '7'
+        weight: 7
     },
     {
         name: 'Specialized',
-        weight: '8'
+        weight: 8
     },
     {
         name: 'Trek',
-        weight: '9'
+        weight: 9
     }
 ];
 
@@ -85,11 +85,11 @@ var fruits = [
         color: 'orange'
     },
     {
-        name: 'strawberry',
+        name: 'Strawberry',
         color: 'red'
     },
     {
-        name: 'grapes',
+        name: 'Grapes',
         color: 'violet'
     }
 ];
