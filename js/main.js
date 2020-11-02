@@ -57,12 +57,65 @@ var min = parseInt( prompt('Inserisci un numero tra 0 e ' + tot) );
 
 var max = parseInt( prompt('Inserisci un numero tra ' + min + ' e ' + tot) );
 
-var newArray = [];
+var newArray1 = [];
 
 for ( var i = 0; i < drivers.length; i++ ) {
     if (min <= i && max >= i) {
-        newArray.push(drivers[i]);
+        newArray1.push(drivers[i]);
     }
 };
 
-$('#drivers').text(newArray);
+$('#drivers').text(newArray1);
+
+
+/** 
+ * JSnack 3
+    Creiamo un array di oggetti (scelti da voi)
+    Creiamo una copia da questo array di partenza e aggiungiamo ai singoli elementi una nuova proprietà position che contiene una lettera casuale.
+    Non dobbiamo modificare l'array iniziale.
+*/
+
+var fruits = [
+    {
+        name: 'Banana',
+        color: 'yellow'
+    },
+    {
+        name: 'Orange',
+        color: 'orange'
+    },
+    {
+        name: 'strawberry',
+        color: 'red'
+    },
+    {
+        name: 'grapes',
+        color: 'violet'
+    }
+];
+
+var newArray2 = [];
+
+for (var i = 0; i < fruits.length; i++) {
+    var copyObj = {
+        name: fruits[i].name,
+        color: fruits[i].color,
+        letter: randomLetter()
+    };
+
+    newArray2.push(copyObj);
+};
+
+console.table(fruits);
+
+console.table(newArray2);
+
+function randomLetter() {
+    var letters = 'abcdefghijklmnopqrstuvxyz';
+
+    return letters[randomNumber(0, letters.length - 1)];
+};
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
