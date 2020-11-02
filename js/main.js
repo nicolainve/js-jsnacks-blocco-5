@@ -100,7 +100,7 @@ for (var i = 0; i < fruits.length; i++) {
     var copyObj = {
         name: fruits[i].name,
         color: fruits[i].color,
-        letter: randomLetter()
+        position: randomLetter()
     };
 
     newArray2.push(copyObj);
